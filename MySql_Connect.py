@@ -9,7 +9,7 @@ try:
         database="u547203012_alagardb")
     print(mysql.connector.__version__)
     cursor = conn.cursor()
-    cursor.execute("SELECT Revenue FROM Balance_Sheet WHERE Revenue < 10000")
+    cursor.execute("SELECT Revenue FROM Balance_Sheet > 10000")
     results = cursor.fetchall()
     if results:
         for row in results:
